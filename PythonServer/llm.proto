@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package server;
+
+service LLMService {
+    rpc GetLLM(GetLLMRequest) returns (GetLLMResp) {};
+}
+
+message GetLLMRequest {
+    string input = 1;
+}
+
+message GetLLMResp {
+    string output = 1;
+}
